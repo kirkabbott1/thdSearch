@@ -1,0 +1,48 @@
+<mat-card>
+    <form fxLayout="row" [formGroup]="searchForm" novalidate ngDefaultControl>
+      <table>
+        <tr>
+          <td>
+            <mat-form-field>
+              <mat-select placeholder="ID" formControlName="id" [(ngModel)]="value1">
+                <mat-option>Select</mat-option>
+                <mat-option *ngFor="let row of rows" [value]="row.id">
+                  {{row.id}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field>
+              <mat-select placeholder="Title" formControlName="title" [(ngModel)]="value2">
+                <mat-option>Select</mat-option>
+                <mat-option *ngFor="let row of rows" [value]="row.title">
+                  {{row.title}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+  
+            <input type='text' style='padding:8px;margin:15px auto;' placeholder='Type to filter the title column...' (keyup)='updateFilter($event)'
+            />
+          </td>
+          <td>
+            <button [disabled]="searchForm.invalid" (click)="search()">
+              <span>Search</span>
+              <!-- <i class=""></i> -->
+            </button>
+          </td>
+          <td>
+            <button (click)="resetSearchForm($event)">
+              <span>Reset</span>
+              <!-- <i class=""></i> -->
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card>
+  <!-- 
+  <input type='text' style='padding:8px;margin:15px auto;width:30%;' placeholder='Type to filter the title column...' (keyup)='updateFilter($event)'
+  /> -->

@@ -1,0 +1,21 @@
+<mat-toolbar class="fixed-header" color="primary">
+    <a href="https://www.homedepot.com/" target="none">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/TheHomeDepot.svg" alt="" max-width='60px'>
+    </a>
+    <span class="example-spacer"></span>
+    <span>The Home Depot Search</span>
+    <span class="example-spacer"></span>
+  
+  
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item> Settings </button>
+      <button mat-menu-item> Help </button>
+    </mat-menu>
+  
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      Menu
+    </button>
+    <mat-icon>more_vert</mat-icon>
+  
+  
+  </mat-toolbar>

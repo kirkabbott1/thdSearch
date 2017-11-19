@@ -1,0 +1,80 @@
+* {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+form {
+    display: block;
+    text-align: center;
+}
+
+form > * {
+    font-size: .9em;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+  
+.example-spacer {
+    flex: 1 1 1 1;
+} 
+
+.fixed-header {
+    padding: 0;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%  !important;
+    color: #EE7126;
+}     
+
+.fixed-header img {
+    max-width: 64px;
+}
+
+.span {
+    color: #EE7126;
+}
+
+.formTable {
+    width: 90%;
+}
+
+input {
+    display: block;
+    width: 75%;
+}
+
+/deep/ .datatable-header {
+    background-color: #EE7126;
+    color: white;
+}
+
+button {
+    padding: 9px;
+    background-color: #EE7126;
+    color: white;
+    border: 1px solid rgba(0,0,0,.42);
+}
+
+/deep/ .datatable-header-cell-wrapper {
+    margin-left: 12px;
+}
+
+/deep/ .datatable-body-cell-label {
+    margin-left: 12px;
+}
+
+/deep/ .datatable-scroll:nth-child(even) {
+    background: #CCC
+}
+
+ /deep/ .datatable-scroll .datatable-row-wrapper:nth-of-type(2n) {
+    background: #CCC;
+}
+/deep/ .datatable-footer-inner {
+    text-align: center;
+    color: #EE7126
+}
